@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/css/context.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/css/event.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/js/network_qosc.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/menu_network.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/msg_info.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/msg_lan.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/msg_pon.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/msg_wlan.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/network_wlanpc.html" charset="GBK" />
+  </component>
+</project>

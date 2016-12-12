@@ -1,0 +1,162 @@
+/*checkbox,select,button的样式*/
+input[type=checkbox].hidden {
+    visibility: hidden;
+}
+.checkbox {
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    position: relative;
+    background: gray;
+}
+.checkbox:before {
+    content: '开';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 2px;
+    color: #ffffff;
+    font-size: 12px;
+}
+/**
+ * Create the text for the off position
+ */
+.checkbox:after {
+    content: '关';
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    color: #6A6A6A;
+    font-size: 12px;
+}
+
+.checkbox label {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50px;
+
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    z-index: 1;
+    left: 2px;
+    background: #B5B5B5;
+}
+
+/**
+ * Create the checkbox event for the label
+ */
+.checkbox input[type=checkbox]:checked + label {
+    left: 32px;
+    background: #FAFAFB;
+}
+
+select {
+    border: solid 1px #e9e9e9;
+    border-radius: 4px;
+    background: #ffffff;
+    width: 420px;
+    height: 30px;
+    outline: none;
+}
+/*保存*/
+.btnsaveup{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-align: center;
+    width: 90px;
+    height:30px;
+    line-height: 30px;
+    background: #36BDD2;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+.btnsavedown{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-align: center;
+    width: 90px;
+    height:30px;
+    line-height: 30px;
+    background: #2CA3B6;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+/*删除*/
+.btndeleup{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-align: center;
+    width: 90px;
+    height:30px;
+    line-height: 30px;
+    background: #E96979;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+.btndeledown{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-align: center;
+    width: 90px;
+    height:30px;
+    line-height: 30px;
+    background: #CC5A68;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+/*添加*/
+.btnaddup{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-align: center;
+    width: 90px;
+    height:30px;
+    line-height: 30px;
+    background: #A5CF44;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+.btnadddown{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    text-align: center;
+    width: 90px;
+    height:30px;
+    line-height: 30px;
+    background: #83A730;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+input.password{
+    width: 415px;
+    height: 25px;
+    border-radius: 4px;
+    border: solid 1px #e9e9e9;
+    outline: none;
+}

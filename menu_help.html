@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>°ïÖú</title>
+    <link href="css/leftmenu.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="init(0)">
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="activityh" bgcolor="#303841"><div id="left"></div></td>
+        <td class="activityh" width="950" bgcolor="#FFFFFF"><iframe width="950" height="900" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" id="main"></iframe></td>
+    </tr>
+</table>
+
+<script>
+    function init(id) {
+        var xmlstr ="";
+        xmlstr +="<table border='0' cellpadding='0' cellspacing='0' width='240'><tr style='height: 30px'></tr>";
+        if(id == 0)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 0 + ")'><font class='selectText'>×´Ì¬-°ïÖú</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 0 + ")'><font class='noselectText'>×´Ì¬-°ïÖú</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 10px'></tr>"
+        if(id == 1)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 1 + ")'><font class='selectText'>ÍøÂç-°ïÖú</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 1 + ")'><font class='noselectText'>ÍøÂç-°ïÖú</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 10px'></tr>"
+        if(id == 2)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 2 + ")'><font class='selectText'>Ó¦ÓÃ-°ïÖú</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 2 + ")'><font class='noselectText'>Ó¦ÓÃ-°ïÖú</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 10px'></tr>"
+        if(id == 3)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 3 + ")'><font class='selectText'>¹ÜÀí-°ïÖú</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 3 + ")'><font class='noselectText'>¹ÜÀí-°ïÖú</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 10px'></tr>"
+        if(id == 4)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 4 + ")'><font class='selectText'>Õï¶Ï-°ïÖú</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 4 + ")'><font class='noselectText'>Õï¶Ï-°ïÖú</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 680px'></tr>"
+        xmlstr +="</table>"
+        document.getElementById("left").innerHTML = xmlstr;
+        mainActivity(id);
+    }
+    function mainActivity(id) {
+        switch (id){
+            case 0:
+            break;
+            case 1:
+                break;
+            case 2:
+                    document.getElementById("main").src = "help_yingyong.html"
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
+
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>WLAN参数配置</title>
+    <link rel="stylesheet" href="css/context.css" type="text/css">
+    <link rel="stylesheet" href="css/event.css" type="text/css">
+</head>
+<body>
+<script>
+    function initCheckBox(box) {
+        if (box.checked){
+            document.getElementById("checkbox").style.background = "#59D56E";
+        }else{
+            document.getElementById("checkbox").style.background = "#EEEEEE";
+        }
+    }
+</script>
+<div style="margin-top: 50px;margin-left: 50px" class="ttf">WLAN全局配置</div>
+<div align="center" style="margin-top: 15px"><div class="ll"></div></div>
+<div style="margin-top: 50px;margin-left: 50px" class="tcf">WLAN全局配置</div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left: 75px">
+    <tr>
+        <td class="tcf" style="text-align: right" height="80">启用开关:</td>
+        <td><div class="checkbox" style="background: #59D56E;margin-left: 15px" id="checkbox">
+            <input class="hidden" type="checkbox" id="checkboxThreeInput" checked="checked" onclick="initCheckBox(this)"/>
+            <label for="checkboxThreeInput"></label>
+        </div></td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">信道选择:</td>
+        <td height="40">
+            <div>
+            <select name="select" style="margin-left: 15px;padding-left: 20px">
+            <option >自动</option>
+            <option >自动</option>
+            <option >自动</option>
+            </select>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">发射功率:</td>
+        <td height="40">
+            <select style="padding-left: 20px;margin-left: 15px">
+                <option >标准</option>
+                <option >标准</option>
+                <option >标准</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">宽带模式:</td>
+        <td height="40" >
+            <select style="padding-left: 20px;margin-left: 15px">
+                <option >802.11b/q自适应</option>
+                <option >802.11b/q自适应</option>
+                <option >802.11b/q自适应</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">Beacon信标帧发送间隔:</td>
+        <td height="40">
+            <select style="padding-left: 20px;margin-left: 15px">
+                <option >100ms</option>
+                <option >100ms</option>
+                <option >100ms</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">DTIM间隔:</td>
+        <td height="40">
+            <select style="padding-left: 20px;margin-left: 15px">
+                <option >100ms</option>
+                <option >100ms</option>
+                <option >100ms</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<div style="margin-left: 240px;margin-top: 40px"><div class="btnsaveup" onmousedown="this.className='btnsavedown'" onmouseup="this.className='btnsaveup'" >保存</div></div>
+<div align="center" style="margin-top: 40px"><div class="ll"></div></div>
+<div style="margin-top: 40px;margin-left: 50px" class="tcf">SSID配置</div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left: 170px;margin-top: 40px">
+    <tr>
+        <td class="tcf" style="text-align: right">SSID索引:</td>
+        <td height="40">
+            <div>
+                <select name="select" style="margin-left: 15px;padding-left: 20px">
+                    <option >1</option>
+                    <option >2</option>
+                    <option >3</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">SSID名称:</td>
+        <td height="40">
+            <select style="padding-left: 20px;margin-left: 15px">
+                <option >Zhijia_3G</option>
+                <option >Zhijia_4G</option>
+                <option >Zhijia_5G</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">加密/认证:</td>
+        <td height="40" >
+            <select style="padding-left: 20px;margin-left: 15px">
+                <option >WPA2</option>
+                <option >WPA2</option>
+                <option >WPA2</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">密码:</td>
+        <td height="40" style="padding-left: 15px">
+            <input class="password" type="password"/>
+        </td>
+    </tr>
+</table>
+<div style="margin-left: 240px;margin-top: 40px"><div class="btnsaveup" onmousedown="this.className='btnsavedown'" onmouseup="this.className='btnsaveup'" >保存</div></div>
+</body>
+</html>

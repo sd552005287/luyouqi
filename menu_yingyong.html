@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>应用</title>
+    <link href="css/leftmenu.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="init(0)">
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="activityh" bgcolor="#303841"><div id="left"></div></td>
+        <td class="activityh" width="950" bgcolor="#FFFFFF"><iframe width="950" height="900" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" id="main"></iframe></td>
+    </tr>
+</table>
+
+<script>
+    function init(id) {
+        var xmlstr = "";
+        xmlstr +="<table border='0' cellpadding='0' cellspacing='0' width='240'><tr style='height: 30px'></tr>";
+        if(id == 0)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 0 + ")'><font class='selectText'>DDNS配置</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 0 + ")'><font class='noselectText'>DDNS配置</font></a></div></td></tr>";
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>高级NAT配置</div></td></tr>"
+        if (id == 1)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+1+")'><font class='selectText'>ALG配置</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 1 + ")'><font class='noselectText'>ALG配置</font></a></div></td></tr>";
+        if (id == 2)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+2+")'><font class='selectText'>DMZ配置</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 2 + ")'><font class='noselectText'>DMZ配置</font></a></div></td></tr>";
+
+        if (id == 3)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+3+")'><font class='selectText'>虚拟主机配置</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 3 + ")'><font class='noselectText'>虚拟主机配置</font></a></div></td></tr>";
+
+        if(id == 4)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 4 + ")'><font class='selectText'>MAC过滤</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 4 + ")'><font class='noselectText'>MAC过滤</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 683px'></tr>"
+        xmlstr +="</table>"
+        document.getElementById("left").innerHTML = xmlstr;
+    }
+</script>
+</body>
+</html>

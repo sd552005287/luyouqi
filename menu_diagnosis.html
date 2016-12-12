@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>’Ô∂œ</title>
+    <link href="css/leftmenu.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="init(0)">
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="activityh" bgcolor="#303841"><div id="left"></div></td>
+        <td class="activityh" width="950" bgcolor="#FFFFFF"><iframe width="950" height="900" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" id="main"></iframe></td>
+    </tr>
+</table>
+
+<script>
+    function init(id) {
+        var xmlstr ="";
+        xmlstr +="<table border='0' cellpadding='0' cellspacing='0' width='240'><tr style='height: 30px'></tr>";
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>Õ¯¬Á’Ô∂œ</div></td></tr>"
+        if (id == 0)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+0+")'><font class='selectText'>Ping≤‚ ‘</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 0 + ")'><font class='noselectText'>Ping≤‚ ‘</font></a></div></td></tr>";
+        if (id == 1)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+1+")'><font class='selectText'>WLANπ≤œÌ≈‰÷√</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 1 + ")'><font class='noselectText'>WLANπ≤œÌ≈‰÷√</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 773px'></tr>"
+        xmlstr +="</table>"
+        document.getElementById("left").innerHTML = xmlstr;
+    }
+</script>
+</body>
+</html>

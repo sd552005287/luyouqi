@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GBK">
+   <link rel="stylesheet" type="text/css" href="css/event.css">
+    <link rel="stylesheet" type="text/css" href="css/context.css">
+    <script language="JavaScript" src="js/network_qosc.js"></script>
+    <title>QOS配置</title>
+</head>
+<body onload="initTable()">
+<script>
+    function startQOS(QOS) {
+        if (QOS.checked){
+            document.getElementById("checkbox").style.background = "#59D56E";
+        }else{
+            document.getElementById("checkbox").style.background = "#EEEEEE";
+        }
+    }
+    function startDSCP(DSCP) {
+        if (DSCP.checked){
+            document.getElementById("checkbox2").style.background = "#59D56E";
+        }else{
+            document.getElementById("checkbox2").style.background = "#EEEEEE";
+        }
+    }
+    function startTC(TC) {
+        if (TC.checked){
+            document.getElementById("checkbox3").style.background = "#59D56E";
+        }else{
+            document.getElementById("checkbox3").style.background = "#EEEEEE";
+        }
+    }
+</script>
+<div style="margin-top: 50px;margin-left: 50px" class="ttf">上行QOS配置</div>
+<div align="center" style="margin-top: 15px"><div class="ll"></div></div>
+
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left: 75px;margin-top: 20px">
+    <tr>
+        <td class="tcf" style="text-align: right" height="70">启用QOS:</td>
+        <td><div class="checkbox" style="background: #59D56E;margin-left: 15px" id="checkbox">
+            <input class="hidden" type="checkbox" id="checkboxThreeInput" checked="checked" onclick="startQOS(this)"/>
+            <label for="checkboxThreeInput"></label>
+        </div></td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">QOS模版:</td>
+        <td height="40">
+            <div>
+                <select name="select" style="margin-left: 15px;padding-left: 20px">
+                    <option >自定义模版</option>
+                    <option >自定义模版</option>
+                    <option >自定义模版</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right">调度策略:</td>
+        <td height="60" style="padding-left: 15px">
+            <input type="checkbox" name="checkbox" value="PQ" style="font-size: 12px"><label style="font-size: 12px">PQ</label>
+            <input type="checkbox" name="checkbox" value="CAR" style="font-size: 12px;margin-left: 30px"><label style="font-size: 12px">CAR</label>
+            <input type="checkbox" name="checkbox" value="Weight" style="font-size: 12px;margin-left: 30px"><label style="font-size: 12px">Weight</label>
+        </td>
+    </tr>
+</table>
+<div style="margin-left: 160px;margin-top: 20px"><div class="btnsaveup" onmousedown="this.className='btnsavedown'" onmouseup="this.className='btnsaveup'" >保存</div></div>
+<div align="center" style="margin-top: 40px"><div class="ll"></div></div>
+<div style="margin-top: 40px;margin-left: 50px" class="tcf">QOS-队列配置</div>
+<table border="0" cellpadding="0" cellspacing="0" style="margin-left: 75px;margin-top: 20px">
+    <tr>
+        <td class="tcf" style="text-align: right" height="50">启用SDCP标志:</td>
+        <td><div class="checkbox" style="background: #59D56E;margin-left: 15px" id="checkbox2">
+            <input class="hidden" type="checkbox" id="checkboxsecond" checked="checked" onclick="startDSCP(this)"/>
+            <label for="checkboxsecond"></label>
+        </div></td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right" height="50">启用TC标志:</td>
+        <td><div class="checkbox" style="background: #59D56E;margin-left: 15px" id="checkbox3">
+            <input class="hidden" type="checkbox" id="checkboxthree" checked="checked" onclick="startTC(this)"/>
+            <label for="checkboxthree"></label>
+        </div></td>
+    </tr>
+    <tr>
+        <td class="tcf" style="text-align: right" height="50">启动802-1 P标志:</td>
+        <td height="40">
+            <div>
+                <select name="select" style="margin-left: 15px;padding-left: 20px">
+                    <option >0标记</option>
+                    <option >0标记</option>
+                    <option >0标记</option>
+                </select>
+            </div>
+        </td>
+    </tr>
+</table>
+<table id="qos" class="tcf" border="1" bordercolor="#e9e9e9" cellpadding="0" cellspacing="0" align="center" style="margin-top: 50px">
+
+</table>
+<table>
+    <tr>
+        <td>
+            <div style="margin-left: 50px;margin-top: 25px"><div class="btnaddup" onmousedown="this.className='btnadddown'" onmouseup="this.className='btnaddup'" onclick="addClick()">添加</div></div>
+        </td>
+        <td>
+            <div style="margin-left: 15px;margin-top: 25px"><div class="btndeleup" onmousedown="this.className='btndeledown'" onmouseup="this.className='btndeleup'" onclick="DeleClick()">删除</div></div>
+        </td>
+        <td>
+            <div style="margin-left: 15px;margin-top: 25px"><div class="btnsaveup" onmousedown="this.className='btnsavedown'" onmouseup="this.className='btnsaveup'" onclick="SaveClick()">保存</div></div>
+        </td>
+    </tr>
+    </table>
+</body>
+</html>

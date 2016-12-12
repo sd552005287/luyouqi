@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>状态</title>
+    <link href="css/leftmenu.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="init(0)">
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="activityh" bgcolor="#303841"><div id="left"></div></td>
+        <td class="activityh" width="950" bgcolor="#FFFFFF"><iframe width="950" height="900" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" id="main"></iframe></td>
+    </tr>
+</table>
+<script>
+    function init(id) {
+        var xmlstr ="";
+        xmlstr +="<table border='0' cellpadding='0' cellspacing='0' width='240'><tr style='height: 30px'></tr>";
+            if(id == 0)
+                xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 0 + ")'><font class='selectText'>设备信息</font></a></div></td></tr>";
+            else
+                xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 0 + ")'><font class='noselectText'>设备信息</font></a></div></td></tr>";
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>网络侧信息</div></td></tr>"
+        if (id == 1)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+1+")'><font class='selectText'>IPV4链接信息</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 1 + ")'><font class='noselectText'>IPV4链接信息</font></a></div></td></tr>";
+        if (id == 2)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+2+")'><font class='selectText'>IPV6链接信息</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 2 + ")'><font class='noselectText'>IPV6链接信息</font></a></div></td></tr>";
+        if (id == 3)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+3+")'><font class='selectText'>PON链路链接信息</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 3 + ")'><font class='noselectText'>PON链路链接信息</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 2px'></tr>"
+
+
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>用户侧信息</div></td></tr>"
+        if (id == 4)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+4+")'><font class='selectText'>WLAN接口信息</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 4 + ")'><font class='noselectText'>WLAN接口信息</font></a></div></td></tr>";
+        if (id == 5)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+5+")'><font class='selectText'>LAN接口信息</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 5 + ")'><font class='noselectText'>LAN接口信息</font></a></div></td></tr>";
+        if (id == 6)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+6+")'><font class='selectText'>USB接口信息</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 6 + ")'><font class='noselectText'>USB接口信息</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 2px'></tr>"
+
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>远程管理状态</div></td></tr>"
+        if (id == 7)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+7+")'><font class='selectText'>交互建立</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 7 + ")'><font class='noselectText'>交互建立</font></a></div></td></tr>";
+        if (id == 8)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+8+")'><font class='selectText'>业务配置下发状态</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 8 + ")'><font class='noselectText'>业务配置下发状态</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 485px'></tr>"
+        xmlstr +="</table>";
+        document.getElementById("left").innerHTML = xmlstr;
+        mainActivity(id);
+    }
+    function mainActivity(id) {
+        switch (id){
+            case 0:
+                document.getElementById("main").src = "msg_info.html"
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+                document.getElementById("main").src = "msg_pon.html"
+                break;
+            case 4:
+                document.getElementById("main").src = "msg_wlan.html"
+                break;
+            case 5:
+                document.getElementById("main").src = "msg_lan.html"
+                break;
+            case 6:
+
+                break;
+            case 7:
+
+                break;
+            case 8:
+
+                break;
+        }
+    }
+</script>
+</body>
+
+</html>

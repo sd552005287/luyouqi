@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>网络</title>
+    <link href="css/leftmenu.css" type="text/css" rel="stylesheet">
+</head>
+<body onload="init(0)">
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td class="activityh" bgcolor="#303841"><div id="left"></div></td>
+        <td class="activityh" width="950" bgcolor="#FFFFFF"><iframe width="950" height="900" marginwidth="0" marginheight="0" scrolling="yes" frameborder="0" id="main"></iframe></td>
+    </tr>
+</table>
+
+<script>
+    function init(id) {
+        var xmlstr = "";
+        xmlstr +="<table border='0' cellpadding='0' cellspacing='0' width='240'><tr style='height: 30px'></tr>";
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>WLAN网络配置</div></td></tr>"
+        if (id == 0)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+0+")'><font class='selectText'>WLAN参数配置</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 0 + ")'><font class='noselectText'>WLAN参数配置</font></a></div></td></tr>";
+        if (id == 1)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+1+")'><font class='selectText'>WLAN共享配置</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 1 + ")'><font class='noselectText'>WLAN共享配置</font></a></div></td></tr>";
+
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>LAN网络配置</div></td></tr>"
+        if (id == 2)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+2+")'><font class='selectText'>IPV4配置</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 2 + ")'><font class='noselectText'>IPV4配置</font></a></div></td></tr>";
+        if (id == 3)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+3+")'><font class='selectText'>IPV6配置</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 3 + ")'><font class='noselectText'>IPV6配置</font></a></div></td></tr>";
+
+        if(id == 4)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 4 + ")'><font class='selectText'>QOS配置</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 4 + ")'><font class='noselectText'>QOS配置</font></a></div></td></tr>";
+
+        xmlstr +="<tr bgcolor='#363e47'><td colspan='2'><div class='conotClickText' style='margin-bottom: 10px'>远程管理</div></td></tr>"
+        if (id == 5)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+5+")'><font class='selectText'>省级数字家庭管理平台服务器</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 5 + ")'><font class='noselectText'>省级数字家庭管理平台服务器</font></a></div></td></tr>";
+        if (id == 6)
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='selectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init("+6+")'><font class='selectText'>认证</font></a></div></td></tr>"
+        else
+            xmlstr += "<tr bgcolor='#363e47'><td><div class='noselectLine'></div></td><td><div class='magrin'><a class='lm' href='javascript:init(" + 6 + ")'><font class='noselectText'>认证</font></a></div></td></tr>";
+
+        if(id == 7)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 7 + ")'><font class='selectText'>宽带设置</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 7 + ")'><font class='noselectText'>宽带设置</font></a></div></td></tr>";
+
+        if(id == 8)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 8 + ")'><font class='selectText'>路由配置</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 8 + ")'><font class='noselectText'>路由配置</font></a></div></td></tr>";
+
+        if(id == 9)
+            xmlstr += "<tr><td><div class='selectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 9 + ")'><font class='selectText'>时间管理</font></a></div></td></tr>";
+        else
+            xmlstr += "<tr><td><div class='noselectLine'></div></td><td><div style='padding-left: 20px'><a class='lm' href='javascript:init(" + 9 + ")'><font class='noselectText'>时间管理</font></a></div></td></tr>";
+        xmlstr +="<tr style='height: 459px'></tr>"
+        xmlstr +="<table>"
+        document.getElementById("left").innerHTML = xmlstr;
+        mainActivity(id);
+    }
+    function mainActivity(id) {
+        switch (id){
+            case 0:
+                document.getElementById("main").src="network_wlanpc.html";
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                document.getElementById("main").src="network_qosc.html";
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+        }
+    }
+</script>
+</body>
+</html>
